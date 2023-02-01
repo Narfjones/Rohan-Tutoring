@@ -9,14 +9,15 @@ public class ExamPrep {
     ArrayList<String> questList = new ArrayList();
     ArrayList<String> ansList = new ArrayList();
 
-    public String getQuestion(int x) {
-        question = questList.get(x);
-        return question;
+    public ExamPrep(){
+        
     }
 
-    public String getAnswer(int x) {
+    public String[] selectQuestion(int x) {
+        question = questList.get(x);
         answer = ansList.get(x);
-        return answer;
+        String[] quest = {question, answer};
+        return quest;
     }
 
     public void setQuestion(String q){
